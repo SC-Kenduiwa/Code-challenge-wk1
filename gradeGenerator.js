@@ -1,11 +1,12 @@
-//prompt the user to input the marks
-//function used to determine grade
+///function used to determine grade
 function calculateGrade(mark) {
     if (mark > 79) return 'A';   // If mark is greater than 79, return 'A'
     if (mark >= 60) return 'B';  //If mark is between 60 and 79 (inclusive), return 'B'
     if (mark >= 49) return 'C';  // If mark is between 49 and 59 (inclusive), return 'C'
     if (mark >= 40) return 'D';  // If mark is between 40 and 49 (inclusive), return 'D'
-    else 'E';                  // If mark is less than 40, return 'E'
+    else {
+        return 'E';               // If mark is less than 40, return 'E'
+                 }            
 }
 function main() {
     const readline = require('readline').createInterface({//read input from terminal
@@ -24,5 +25,4 @@ function main() {
     });
 
 }
-main();//call the main function to start the program
-
+main();//call the main function to start the program/prompt the user to input the marks

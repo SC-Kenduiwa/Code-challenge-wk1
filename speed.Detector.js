@@ -1,11 +1,11 @@
 // Function to detect speed and display appropriate message
 function detectSpeed() {
     const readline = require('readline').createInterface({
-        input: process.stdin,
-        output: process.stdout
+        input: process.stdin,//using the keyboard
+        output: process.stdout//using the Terminal
     });
 
-    readline.question("Enter the speed (in km/h): ", speedInput => {
+    readline.question("Enter the speed (in km/h): ", speedInput => {//starting the session
         const speed = parseInt(speedInput); // Convert input to integer
 
         // Define speed limit and demerit threshold
@@ -25,7 +25,7 @@ function detectSpeed() {
                 console.log(`Demerit points: ${demeritPoints}`);
             } else {
                 // Speed is within the limit
-                console.log("Speed is within the limit");
+                console.log("Ok");
             }
 
             // Check if demerit points exceed the limit for license suspension
@@ -37,7 +37,7 @@ function detectSpeed() {
             console.log("Invalid input! Please enter a valid speed.");
         }
 
-        readline.close(); // Close readline interface
+        readline.close(); // ending the session
     });
 }
 
